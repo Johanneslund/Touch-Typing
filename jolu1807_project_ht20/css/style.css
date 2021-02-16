@@ -1,0 +1,299 @@
+header {
+    max-height: 200px;
+}
+
+header h1 {
+
+    font-size: 70px;
+    color:white;
+}
+
+body {
+    max-width: 600px;
+    margin: auto;
+    background-image: url("../img/back4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #000;
+    font-family: 'MyFont', Arial, Helvetica, sans-serif;
+}
+
+.highlight {
+
+    background-color: grey;
+
+}
+
+img {
+
+    cursor: pointer;
+
+}
+
+.correct {
+
+    color: white;
+    opacity: 60%;
+
+}
+
+.incorrect {
+
+color: red;
+
+}
+
+.lang {
+
+    margin-top: 10px;
+
+
+}
+
+.choice {
+
+    float:right;
+
+
+}
+
+
+main {
+    max-height: fit-content;
+    color:white;
+}
+
+.gamearea {
+
+    background-color: black;
+    text-align: center;
+    max-height: 700px;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+}
+
+#author {
+
+    font-family: "myCursive";
+
+}
+ #test {
+
+    margin-bottom: 5px;
+ }
+
+#textinput {
+
+    margin-top: 5px;
+    margin-left: 35%;
+    height: 30px;
+    width: 200px;
+    margin-bottom: 10px;
+
+
+}
+#play {
+
+    height: 40px;
+    width: 40px;
+}
+
+#startbutton {
+
+    height: 40px;
+    width: 40px;
+    border: none;
+    float: right;
+    margin-right: 24%;
+
+}
+
+.stattext {
+
+    margin-left: 40%;
+  
+
+}
+
+.letters {
+    font-size: 70px;
+    color:white;
+    position:relative;
+    transform: rotate(-90deg);
+    opacity: 100%;
+}
+
+main h1{
+
+    font-size: 70px;
+    color:white;
+    position:relative;
+
+}
+
+
+.stopbutton {
+
+    background: url("../img/stop.png");
+    background-size: cover;
+
+}
+.playbutton {
+    background: url("../img/play.png");
+    background-size: cover;
+
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 600px;
+    text-align: center;
+    font-size: 15px;
+    color: whitesmoke;
+    border-top: 1px solid whitesmoke;
+    opacity: 90%;
+}
+
+footer a {
+    color: whitesmoke;
+}
+
+@font-face {
+    font-family: 'MyFont'; /*a name to be used later*/
+    src: url(../font/Montserrat-Medium.ttf); /*URL to font*/
+}
+@font-face {
+    font-family: 'myCursive'; /*a name to be used later*/
+    src: url(../font/Montserrat-MediumItalic.ttf); /*URL to font*/
+}
+
+/* Basic styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+    --bg-color: url("../img/back4.jpg");
+}
+
+
+/* title styles */
+.home-title span{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    
+
+}
+
+
+
+.home-title span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:rgb(49, 49, 49);
+    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+
+.home-title span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(0);
+}
+
+.home-title span:nth-of-type(1)::before,
+.home-title span:nth-of-type(1)::after{
+    animation-delay: 1s;
+}
+
+.home-title span:nth-of-type(2)::before,
+.home-title span:nth-of-type(2)::after{
+    animation-delay: 1.5s;
+}
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+
+#headerleft{
+    margin-left: 0%;
+
+}
+
+#headerright{
+    margin-left: 30%;
+    width: 450px;
+    margin-top: 0%;
+}
+
+
+.loader-icon,
+.loader-icon:before,
+.loader-icon:after {
+
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.loader-icon {
+  margin: 0 auto;
+  position: absolute;
+  background: transparent;
+}
+
+.loader-icon:before,
+.loader-icon:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  border: 15px solid #efefef;
+  opacity: 0.5;
+  animation: 30s rotate infinite linear;
+}
+
+.loader-icon:before {
+  border-left-color: transparent;
+}
+
+.loader-icon:after {
+  top: 16.5%;
+  left: 16.5%;
+  width: 100px;
+  height: 100px;
+  border-right-color: transparent;
+  opacity: 0.2;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+    0%, 80% {
+    transform: rotate(360deg);
+  }
+}

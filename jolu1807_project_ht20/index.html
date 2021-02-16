@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+Johannes Lundkvist
+jolu1807
+jolu1807@student.miun.se
+-->
+<html lang="sv">
+
+<head>
+    <title>Touch Typing</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="loader-icon" id="headerleft"></div>
+        <h1 class="home-title" id="headerright">
+            <span>Touch</span>
+            <span>Typing</span>
+        </h1>
+    </header>
+
+    <main>
+        <div class="choice">
+            <div class="casings">
+                <input type="checkbox" id="casing">
+                <label> Ignorera stor bokstav</label>
+            </div>
+
+            <div class="lang">
+                <input type="radio" id="swedish" checked="checked" name="radio">
+                <label> Svenska</label>
+                <input type="radio" id="english" name="radio">
+                <label> Engelska</label>
+            </div>
+        </div>
+
+        <div class="textpick">
+            <p id="test">Välj text</p>
+            <select id="textpicker" name="textpicker">
+            </select>
+        </div>
+
+
+        <div class="sound">
+            <input type="checkbox" id="mute" >
+            <label> Ljud</label>
+        </div>
+
+        <div class="gamearea">
+            <h2 id="texttitle">Test</h2>
+            <h3 id="author">Test testsson</h3>
+            <div id="textarea"></div>
+        </div>
+
+        <button class="playbutton" id="startbutton"></button>
+        <input id="textinput" placeholder="Skriv här...">
+
+
+
+        <div id="statarea">
+            <p id="grosswpm" class="stattext">Ord i minuten:</p>
+            <p id="netwpm" class="stattext">Ord i minuten, minus fel:</p>
+            <p id="errors" class="stattext">Antal fel:</p>
+            <p id="errorpercentage" class="stattext">Träffsäkerhet:</p>
+        </div>
+
+        <canvas id="canvas" width="200" height="100"></canvas>
+
+
+
+    </main>
+
+    <footer>
+
+        <p>&copy; Copyright 2020 Johannes Lundkvist</p>
+
+        <a href="mailto:johanneslundkvist@hotmail.com">Contact!</a>
+
+    </footer>
+</body>
+
+
+</html>
